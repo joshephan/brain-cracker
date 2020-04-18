@@ -1,27 +1,21 @@
 <template>
   <main>
-    <div class="box side"></div>
-    <div class="box body">
-      <div class="top-content">
-        <h1>BRAIN CRACKER</h1>
-        <h2></h2>
-        <img src="" alt="main image">
-      </div>
-      <div class="row">
-        <a class="content github" href="http://github.com/joshephan">
-          <img src="" alt="to github" />
-        </a>
-        <a class="content brunch" href="https://brunch.co.kr/@skykamja24">
-          <img src="" alt="to brunch" />
-        </a>
-        <div class="content quote">
-          <blockquote :cite="quote[qIndex].cite">
-            {{quote[qIndex].text}}
-          </blockquote>
-        </div>
-      </div>
+    <div class="box"></div>
+    <div class="box">
+      BRAIN CRACKER
     </div>
-    <div class="box side"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
   </main>
 </template>
 
@@ -31,7 +25,7 @@ export default {
     return {
       quote: [],
       qIndex: 0
-    }
+    };
   },
   created() {
     this.qIndex = Math.floor(Math.random() * (this.quote.length - 1));
@@ -40,38 +34,39 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$bp1: 1080px; // small desktop, half browser desktop window
-$bp2: 768px; // tablet
-
 main {
-  display: flex;
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr 1fr 1fr;
   width: 100vw;
   height: 100%;
   min-height: 100vh;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: 10px solid $c-black;
+  background: $c-bg-main;
+  & > .box {
+    border-bottom: 2px solid $c-black;
+    border-right: 2px solid $c-black;
+  }
 }
 
 .box {
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  border: 2px solid #111111;
-  &.side {
-    max-width: 100px;
+  padding: 10px 20px;
+  &:nth-child(1) {
+    grid-area: 1 / 1 / 3 / 3;
   }
-  &.body {
-    max-width: 100%;
+  &:nth-child(2) {
+    grid-area: 1 / 3 / 2 / 6;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 120px;
   }
-}
-
-.row {
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
-@media (max-width: $bp1) {
-  
+  &:nth-child(6) {
+    grid-area: 3/ 1 / 5 / 2;
+    background-color: $c-black;
+  }
 }
 </style>

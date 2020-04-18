@@ -1,0 +1,18 @@
+$bp-min-desktop: 1080px; // small desktop, half browser desktop window
+$bp-tablet: 768px; // tablet
+$c-black: #222222;
+$c-bg-main: #efefef;
+$c-bg-sub: #c7c2cb;
+$c-bg-hover: #c8cac7;
+$c-white: #f0f0f0;
+$c-theme: #ff8100;
+
+.box {
+  font-family: "Black Han Sans", sans-serif;
+  &.link {
+    cursor: pointer;
+    &:hover {
+      background-color: $c-bg-hover;
+    }
+  }
+}
