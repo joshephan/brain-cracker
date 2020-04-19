@@ -137,6 +137,7 @@ main {
   height: 40px;
   position: relative;
   background: $c-black;
+  animation: rotate 10s infinite;
   &.rotate {
     transform: rotate(180deg);
   }
@@ -266,9 +267,24 @@ main {
     &.first {
       display: none;
     }
-    &.head, &.writer, &.contact, &.airdesk, &.youtube {
+    &.head,
+    &.writer,
+    &.contact,
+    &.airdesk,
+    &.youtube {
       grid-column: 1 / 3;
     }
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 </style>

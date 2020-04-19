@@ -5,7 +5,7 @@ $c-bg-sub: #c7c2cb;
 $c-bg-hover: #c8cac7;
 $c-white: #f0f0f0;
 $c-theme: #ff8100;
-
+$font: "Zilla Slab", serif;
 body {
   width: 100%;
   box-sizing: border-box;
@@ -22,20 +22,21 @@ h3 {
 }
 p {
   font-size: 20px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
 }
 h4 {
   font-size: 20px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
 }
 .box {
-  font-family: Black Han Sans, sans-serif;
+  font-family: $font;
   padding: 10px 20px;
   user-select: none;
   box-sizing: border-box;
   cursor: pointer;
+  line-height: 1.2;
   picture {
     margin-top: 25px;
     display: flex;

@@ -25,7 +25,7 @@ export default {
       {
         rel: "stylesheet",
         href:
-          "https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Roboto&display=swap"
+          "https://fonts.googleapis.com/css2?family=Zilla+Slab&family=Open+Sans&display=swap"
       }
     ]
   },
