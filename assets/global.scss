@@ -1,5 +1,4 @@
 $bp-min-desktop: 1080px; // small desktop, half browser desktop window
-$bp-tablet: 768px; // tablet
 $c-black: #222222;
 $c-bg-main: #efefef;
 $c-bg-sub: #c7c2cb;
@@ -7,12 +6,49 @@ $c-bg-hover: #c8cac7;
 $c-white: #f0f0f0;
 $c-theme: #ff8100;
 
+body {
+  width: 100%;
+  box-sizing: border-box;
+  user-select: none;
+}
+h1 {
+  font-size: 72px;
+}
+h2 {
+  font-size: 42px;
+}
+h3 {
+  font-size: 36px;
+}
+p {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+}
+h4 {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
 .box {
   font-family: "Black Han Sans", sans-serif;
-  &.link {
-    cursor: pointer;
-    &:hover {
-      background-color: $c-bg-hover;
+  padding: 10px 20px;
+  user-select: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  picture {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 40%;
     }
+  }
+  color: $c-black;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    background-color: $c-bg-hover;
   }
 }
